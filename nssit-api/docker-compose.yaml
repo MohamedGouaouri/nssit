@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  app:
+    image: nssit:v1
+    ports:
+      - 5000:5000
+    environment:
+      SECRET_KEY: ba6937627292998bea63445ef3423fedd1987d84595131
+      SERVER_NAME: nssit_server
+      ENC_KEY: ba6937627292998b
